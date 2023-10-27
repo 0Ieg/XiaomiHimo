@@ -5,11 +5,13 @@ import { Button } from './templates/button';
 const Styled = styled.main`
   
 `
-export const Main:FC = ()=>{
-  return(
-    <Styled>
-      Main
-      <Button backColor='red'>ЗАКАЗАТЬ</Button>
-    </Styled>
+export const Main: FC = () => {
+  return (
+    <div className="container">
+      <Styled>
+        Main
+        <Button>ЗАКАЗАТЬ</Button>
+      </Styled>
+    </div>
   )
 }

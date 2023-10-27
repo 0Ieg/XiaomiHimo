@@ -5,20 +5,22 @@ const Styled = styled.button`
 width: 420px;
 height: 80px;
 font: 400 20px serif;
+letter-spacing: 22px;
 color: var(--color-white); 
 cursor: pointer;
-&.black{
-  background-color: var(--color-black);
-}
-&.red{
+border: none;
+border-radius: var(--borrad);
+background-color: var(--color-black);
+transition: all 0.1s ease;
+&:hover{
   background-color: var(--color-red);
 }
 `
-type PT = {backColor:'black'|'red', children:ReactNode}
+type PT = {children:ReactNode}
 export const Button:FC<PT> = (props)=>{
-  const {backColor, children} = props
+  const {children} = props
   return(
-    <Styled className={backColor==='black'?'black':'red'}>
+    <Styled>
       {children}
     </Styled>
   )

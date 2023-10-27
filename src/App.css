@@ -1,6 +1,23 @@
+*,::before,::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,ol,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
 :root{
   --color-black: #131313;
   --color-white: #fff;
   --color-gray: #6F6F6F;
   --color-red: #FF4040;
+  --borrad: 5px;
+}
+[class*='container']{
+  max-width: 1200px;
+  margin: 0 auto;
 }
