@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Styled = styled.button`
 width: 420px;
 height: 80px;
-font: 400 20px serif;
+font: 400 20px Inter;
 letter-spacing: 22px;
 color: var(--color-white); 
 cursor: pointer;

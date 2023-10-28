@@ -6,6 +6,9 @@ const Styled = styled.header`
 height: 100px;
 display: flex;
 justify-content: space-between;
+.logo img{
+  border-radius: 0 0 var(--borrad) var(--borrad);
+}
 .menu{
   .menu__list{
     height: 100%;
@@ -21,6 +24,7 @@ justify-content: space-between;
         padding: 0 20px;
         border-radius: 0 0 var(--borrad) var(--borrad);
         color: var(--color-black);
+        font: 400 16px Inter;
         transition: all 0.1s ease;
         &:hover{
           background-color: var(--color-black);

@@ -10,6 +10,10 @@ a{
   text-decoration: none;
   color: inherit;
 }
+h1,h2,h3,h4{
+  font: inherit;
+}
+
 :root{
   --color-black: #131313;
   --color-white: #fff;
@@ -20,4 +24,22 @@ a{
 [class*='container']{
   max-width: 1200px;
   margin: 0 auto;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./BLL/fonts/Inter-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./BLL/fonts/Inter-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./BLL/fonts/Inter-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 900;
 }
