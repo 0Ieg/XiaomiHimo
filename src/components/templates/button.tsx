@@ -7,6 +7,7 @@ height: 80px;
 font: 400 20px Inter;
 letter-spacing: 22px;
 color: var(--color-white); 
+text-transform: uppercase;
 cursor: pointer;
 border: none;
 border-radius: var(--borrad);
