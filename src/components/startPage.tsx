@@ -1,7 +1,7 @@
 import {FC} from 'react';
 import styled from 'styled-components';
 import { Button } from './templates/button';
-import { Container } from './templates/container';
+import { Slider } from './templates/slider';
 
 const Styled = styled.section`
 height: 100dvh;
@@ -22,6 +22,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 70px 0;
   }
 }
 `
@@ -37,7 +38,10 @@ export const StartPage: FC = () => {
         </div>
         <Button>Заказать</Button>
       </div>
-      <div className="bike"></div>
+      <div className="bike">
+        <Slider/>
+        <div className="characteristics"></div>
+      </div>
     </Styled>
   )
 }

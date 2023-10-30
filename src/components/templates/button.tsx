@@ -2,7 +2,8 @@ import {FC, ReactNode} from 'react';
 import styled from 'styled-components';
 
 const Styled = styled.button`
-width: 420px;
+max-width: 420px;
+width: 100%;
 height: 80px;
 font: 400 20px Inter;
 letter-spacing: 22px;
