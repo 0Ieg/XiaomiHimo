@@ -9,6 +9,10 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 align-items: center;
 .description{
+  min-height: 585px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   .title{
     font: 900 64px Inter;
   }
@@ -23,6 +27,20 @@ align-items: center;
     flex-direction: column;
     gap: 20px;
     padding: 70px 0;
+  }
+}
+.characteristics{
+  width: 100%;
+  tr{
+    text-align: center;
+    th{
+      font: 700 16px Inter;
+      text-transform: uppercase;
+    }
+    td{
+      font: 400 14px Inter;
+      text-transform: lowercase;
+    }
   }
 }
 `
@@ -40,7 +58,24 @@ export const StartPage: FC = () => {
       </div>
       <div className="bike">
         <Slider/>
-        <div className="characteristics"></div>
+        <table className="characteristics">
+          <thead className='thead'>
+            <tr>
+              <th>до 100 км</th>
+              <th>25 км/ч</th>
+              <th>3 режима езды</th>
+              <th>25 кг</th>
+            </tr>
+          </thead>
+          <tbody className='tbody'>
+            <tr>
+              <td>Запас хода</td>
+              <td>Макс корость</td>
+              <td>механический, гибридный,<br/>электрический</td>
+              <td>вес</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </Styled>
   )
