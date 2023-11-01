@@ -20,6 +20,7 @@ h1,h2,h3,h4{
   --color-gray: #6F6F6F;
   --color-red: #FF4040;
   --borrad: 5px;
+  scroll-behavior: smooth;
 }
 [class*='container']{
   max-width: 1200px;

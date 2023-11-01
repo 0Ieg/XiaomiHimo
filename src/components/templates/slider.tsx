@@ -26,6 +26,10 @@ width: 100%;
       padding: 0 10px;
       height: 25px;
       cursor: pointer;
+      &:hover{
+        background: radial-gradient(rgba(255, 64, 64, 0.40),rgba(255, 64, 64, 0.1), rgba(255, 64, 64, 0));
+        border-radius: 7px;
+      }
       .button{
         width: 6px;
         height: 100%;

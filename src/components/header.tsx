@@ -6,6 +6,7 @@ import { Container } from './templates/container';
 const Styled = styled.header`
 position: fixed;
 width: 100%;
+z-index: 5;
 .wrapper{
   height: 120px;
   padding-bottom: 20px;
@@ -25,13 +26,15 @@ width: 100%;
     gap: 10px;
     .menu__item{
       height: 100%;
+      border-radius: 0 0 var(--borrad) var(--borrad);
+      overflow: hidden;
       a{
         height: 100%;
         display: flex;
         align-items: center;
         padding: 0 20px;
-        border-radius: 0 0 var(--borrad) var(--borrad);
         color: var(--color-black);
+        background-color: var(--color-white);
         font: 400 16px Inter;
         transition: all 0.1s ease;
         &:hover{
@@ -57,7 +60,7 @@ export const Header: FC = () => {
           <nav className='menu'>
             <ul className="menu__list">
               <li className="menu__item">
-                <a href="#">Описание</a>
+                <a href="#description">Описание</a>
               </li>
               <li className="menu__item">
                 <a href="#">Характеристики</a>
