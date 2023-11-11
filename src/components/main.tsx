@@ -5,6 +5,7 @@ import { Container } from './templates/container';
 import { Description } from './description';
 import { Characteristics } from './main/characteristics';
 
+
 const Styled = styled.main`
   
 `
