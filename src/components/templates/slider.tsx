@@ -68,7 +68,7 @@ export const Slider:FC = ()=>{
         <div className="slides" style={{transform:`translateX(-${100*currentSlide}%)`}}>
           {Slides}
         </div>
-        <div className="buttons">
+        <div className="buttons" >
           {Buttons}
         </div>
       </div>

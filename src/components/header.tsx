@@ -66,7 +66,7 @@ export const Header: FC = () => {
                 <a href="#characteristics">Характеристики</a>
               </li>
               <li className="menu__item">
-                <a href="#">стоимость</a>
+                <a href="#price">стоимость</a>
               </li>
             </ul>
           </nav>
