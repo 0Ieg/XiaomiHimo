@@ -1,24 +1,26 @@
 import { FC, useState } from "react";
 import styled from "styled-components";
-import b1 from '../../BLL/images/b1.jpg'
-import b2 from '../../BLL/images/b2.jpg'
-import b3 from '../../BLL/images/b3.jpg'
-import b4 from '../../BLL/images/b4.jpg'
-import b5 from '../../BLL/images/b5.jpg'
+
 
 const Styled = styled.div`
 width: 100%;
+border-radius: var(--borrad);
+overflow: hidden;
 .window{
-  max-width: 630px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   .slides{
     display: flex;
+    .slide{
+      min-width: 100%;
+    }
   }
   .buttons{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -48,13 +50,13 @@ width: 100%;
 
 `
 
-export const Slider:FC = ()=>{
+export const Slider:FC<{images:any[]}> = (props)=>{
+  const { images } = props
   const [currentSlide, setCurrentSlide] = useState(0)
   const clickHandler = (event:any)=>{
     setCurrentSlide(event.target.id)
   }
-  const images = [b1,b2,b3,b4,b5]
-  const Slides = images.map((image, id)=><img src={image} alt="" key={id}/>)
+  const Slides = images.map((image, id)=><img src={image} alt="" key={id} className="slide"/>)
   const Buttons = images.map((image,index)=>{
     return(
       <div className="buttonWrapper" onClick={clickHandler} id={index.toString()} key={index}>

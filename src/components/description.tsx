@@ -29,6 +29,10 @@ padding-top: 120px;
     }
   }
 }
+.image{
+  border-radius: var(--borrad);
+  overflow: hidden;
+}
 `
 export const Description:FC = ()=>{
   return(

@@ -2,11 +2,16 @@ import {FC} from 'react';
 import styled from 'styled-components';
 import { Button } from './templates/button';
 import { Slider } from './templates/slider';
+import b1 from '../BLL/images/b1.jpg'
+import b2 from '../BLL/images/b2.jpg'
+import b3 from '../BLL/images/b3.jpg'
+import b4 from '../BLL/images/b4.jpg'
+import b5 from '../BLL/images/b5.jpg'
 
 const Styled = styled.section`
 height: 100dvh;
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: repeat(2, 50%);
 align-items: center;
 .description{
   min-height: 585px;
@@ -29,6 +34,9 @@ align-items: center;
     padding: 70px 0;
   }
 }
+.slider{
+  width: 100%;
+}
 .characteristics{
   width: 100%;
   tr{
@@ -45,6 +53,7 @@ align-items: center;
 }
 `
 export const StartPage: FC = () => {
+  const images = [b1,b2,b3,b4,b5]
   return (
     <Styled id=''>
       <div className="description">
@@ -57,7 +66,9 @@ export const StartPage: FC = () => {
         <Button>Заказать</Button>
       </div>
       <div className="bike">
-        <Slider/>
+        <div className="slider">
+          <Slider images={images}/>
+        </div>
         <table className="characteristics">
           <thead className='thead'>
             <tr>
