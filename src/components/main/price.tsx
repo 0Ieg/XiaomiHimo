@@ -34,20 +34,80 @@ padding-bottom: 100px;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        input{
+          max-width: 420px;
+          height: 33px;
+          border-width: 0 0 2px 0;
+          border-color: black;
+          font: 400 16px Inter;
+          &:focus{
+            outline: none;
+          }
+        }
         .colors{
-          font: 400 14px Inter;
+          font: 400 16px Inter;
           color: var(--color-gray);
           text-transform: lowercase;
           .label{
             padding-bottom: 10px;
           }
+          input{
+            width: 80px;
+            height: 14px;
+            border-radius: 30px;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            &:not(:last-of-type){
+              margin-right: 23px;
+            }
+            &::after{
+              content: '';
+              border-radius: 30px;
+              position: absolute;
+              z-index: 3;
+              width: 100%;
+              height: 100%;
+            }
+            &:first-of-type::after{
+              background-color: var(--color-gray);
+            }
+            &:nth-of-type(2)::after{
+              background-color: var(--color-white);
+              border: 1px solid var(--color-gray);
+            }
+            &:last-of-type::after{
+              background-color: var(--color-red);
+            }
+          }
         }
       }
-
     }
   }
   .photo{
     max-width: 603px;
+    position: relative;
+    .price{
+      font: 400 calc(var(--index)*1.2) Inter;
+      position: absolute;
+      top: calc(var(--index)*2.5);
+      left: calc(var(--index)*-3);
+      &::after, &::before{
+        content: '';
+        width: calc(var(--index)*7.6);
+        height: calc(var(--index)*3.5);
+        border-radius: 50%;
+        border: 1px solid var(--color-red);
+        position: absolute;
+        left: calc(var(--index)*-0.5);
+      }
+      &::after{
+        top: calc(var(--index)*-1.3);
+      }
+      &::before{
+        top: calc(var(--index)*-0.8);
+      }
+    }
     .img{
       width: 100%;
     }
@@ -72,9 +132,9 @@ export const Price:FC = ()=>{
                 <input type="tel" placeholder="телефон" />
                 <div className="colors">
                   <div className="label">выберите желаемый цвет</div>
-                  <input type="radio" name="color" id="" />
-                  <input type="radio" name="color" id="" />
-                  <input type="radio" name="color" id="" />
+                  <input type="radio" name="color" id="" value={'gray'}/>
+                  <input type="radio" name="color" id="" value={'white'}/>
+                  <input type="radio" name="color" id="" value={'red'}/>
                 </div>
                 <Button>Заказать</Button>
               </form>
